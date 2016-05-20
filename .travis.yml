@@ -2,3 +2,11 @@ language: ruby
 rvm: 2.2.1
 before_install:
 - export DISPLAY=:99.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: e2mlBA5YEOPY/35Jg+B1jcO9qwgR1JJLfH2ekXyRF0hvkEmf6DsR4A7bn5FOmx5e2emA4RamkMAOn0eJY0XZM2YzfN9kyUfKwNCjLad5+HASMBwMf9HXn8+Kp/6omL4M9h0NQj2cKgjdOtV8/iu2w+ctp8Ilr1boBUvhJVxmgkJvLN5M9fx5/xcEeSf7mdYCocMLSJhkJ6Gbbffffu5L5zK5HPGnIZWC+zPBZwZLQuPOFlryNy36N2PP/iaupkBsrkCKftOtvQ93KxtGCUEiaL8BmxDIHVQ5zmUXIHi/mpn4yTgD/4h3AsmcYjLHcoqezEjdi2oy3gApBeZxwpicNmy1XL/TIIBZ43Lw0zWMuTpjgI6TrKEPBzoFQaLcr/vFl8ZztT+WbuhxffukdmaIwb01G3Jh8SL1sFR2oe7U0KexGlrrhB4mr3CGoMA3EkF2w+UIyetaUDvYakhbCX9OLughwVyh/d1dM9nn2Syqe7c8yk3IrdEfrUEFi86xL4IuomAtHhqfUq92JER9vDahiLNuMEbtVh/YNBB0hefF2HvL/RUxEZQ1hNc8CLjWxp2FxwqVygJ8hBeuR4fwSKyiwUuWiTQJQGJ0A9qDpjWcEekjHwM3r7HtItubRYdXdxTfQVka9Ni3bKQHSd/vr028qoKAYxyfbCykZ8u1PFhRwz8=
+  app: BlogSystem
+  on:
+    repo: leducphuc/BlogSystem
+    branch: static-pages
