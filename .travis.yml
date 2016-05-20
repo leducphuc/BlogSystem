@@ -1,0 +1,4 @@
+language: ruby
+rvm: 2.2.1
+before_install:
+- export DISPLAY=:99.0
