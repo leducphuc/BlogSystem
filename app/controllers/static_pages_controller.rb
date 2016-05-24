@@ -3,8 +3,11 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @entry = current_user.entries.build if logged_in?
+    if logged_in?
+    @entry = current_user.entries.build
     @feed_items = current_user.feed.paginate(page:params[:page])
+    @comment = Comment.new
+    end
   end
 
   def help
