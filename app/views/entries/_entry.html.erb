@@ -12,7 +12,7 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 </span>
 </li>
 <%unless entry.comments.blank? %>
-<div clas = "comment">
+<div class = "comment">
 <% entry.comments.each do |f| %>
 <li>
 	<span class="user"><%=gravatar_for(f.user,size:30)%><%=link_to f.user.name,f.user%></span>
@@ -33,7 +33,7 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 			
 		</div>
 		<div class="col-md-2">
-			<%= f.submit "Post",class: "btn btn-lg btn-primary" %>
+			<%= f.submit "Comment",class: "btn btn-lg btn-primary" %>
 			
 		</div>
 	</div>
