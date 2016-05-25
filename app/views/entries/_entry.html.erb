@@ -22,9 +22,11 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 	<% end %>
 </div>
 <% end %>
+<% if logged_in?%>
 <li>
 <%= form_for([entry,@comment]) do |f|%>
 	<%= f.text_field :content%>
 	<%= f.submit "Post comment",class: "btn btn-lg btn-primary" %>
 	<% end %>
-	</li> 
+	</li>
+<% end %>

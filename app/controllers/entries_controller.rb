@@ -1,6 +1,7 @@
 class EntriesController < ApplicationController
   before_action :logged_in_user,only:[:create,:destroy]
   before_action :correct_user,only: :destroy
+
   def create
     @entry = current_user.entries.build(entry_params)
     if @entry.save
@@ -16,7 +17,6 @@ class EntriesController < ApplicationController
     flash[:success] = "Entry deleted"
     redirect_to root_url
   end
-
 
   private
 

@@ -1,4 +1,4 @@
-    # Users
+# Users
 User.create!(name:  "banana",
              email: "banana@gmail.com",
              password:              "password",
@@ -19,7 +19,6 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.entries.create!(title:title,content: content) }
 end
-
 # Following relationships
 users = User.all
 user  = users.first

@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all.paginate(page:params[:page])
   end
-
+  
   def following
     @title = "Following"
     @user = User.find(params[:id])
