@@ -24,9 +24,19 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 <% end %>
 <% if logged_in?%>
 <li>
+<div class="form-inline">
 <%= form_for([entry,@comment]) do |f|%>
-	<%= f.text_field :content%>
-	<%= f.submit "Post comment",class: "btn btn-lg btn-primary" %>
+	<div class="row">
+		<div class="col-md-8">
+			<%= f.text_field :content,placeholder:"leave a comment"%>
+			
+		</div>
+		<div class="col-md-2">
+			<%= f.submit "Post",class: "btn btn-lg btn-primary" %>
+			
+		</div>
+	</div>
 	<% end %>
+	</div>
 	</li>
 <% end %>
