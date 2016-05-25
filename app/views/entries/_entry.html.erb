@@ -23,6 +23,7 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 </div>
 <% end %>
 <% if logged_in?%>
+<%if entry.user == current_user or entry.user.followers.include?(current_user)%>
 <li>
 <div class="form-inline">
 <%= form_for([entry,@comment]) do |f|%>
@@ -39,4 +40,5 @@ Posted <%= time_ago_in_words(entry.created_at) %> ago.
 	<% end %>
 	</div>
 	</li>
+<% end %>
 <% end %>

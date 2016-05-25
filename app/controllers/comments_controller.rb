@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
 
      def correct_comment
        @entry = Entry.find(params[:entry_id])
-        redirect_to root_url unless @entry.user == current_user or @entry.user.followers.include?(current_user) 
+       flash[:danger] = "You need to follow this user to do this" unless @entry.user == current_user or @entry.user.followers.include?(current_user) 
     end
 
 end

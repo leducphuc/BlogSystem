@@ -16,6 +16,9 @@ $gray-lighter:#666;
 
 body {
   padding-top: 70px;
+  padding-right:70px;
+  padding-left: 50px;
+  padding-bottom: 50px;
 }
 
 section {
@@ -210,7 +213,8 @@ padding: 0;
   margin-top: 5px;
   }
   .comment{
-    text-align:leftt;
+    display:block;
+    margin-left:80px; 
     .user{
       margin-left:60px;
       margin-top:2em;
